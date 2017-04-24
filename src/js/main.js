@@ -1,5 +1,11 @@
-import Form from './form';
+import Vue from 'vue'
+import Form from './Form.vue'
 
-let form = new Form;
+window.Store = {
+	value1: 'HelloWorld'
+};
 
-document.getElementsByTagName("H1")[0].innerHTML =  form.hello();
+new Vue({
+	el: '#root',
+	render: h => h(Form)
+}) 
